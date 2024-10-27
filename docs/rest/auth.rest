@@ -6,3 +6,18 @@ Content-Type: application/json
     "email": "mec@gmail.com",
     "password": "123456"
 }
+
+
+### login sin conexion a BD
+POST http://127.0.0.1:3000/auth/login
+Content-Type: application/json
+
+{
+    "name":"prueba2",
+    "email":"mec@hotmail.com",
+    "password":"1234567"
+}
+
+### USER
+Get http://127.0.0.1:3000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3Mjk5OTQ2MzMsImV4cCI6MTcyOTk5NDY5M30.1bEaCuWgmgDraw4nWtwB_dm4UJ5W6L2_6f17cnZv2_E
