@@ -18,3 +18,13 @@ nest g res modules/users
 nest g co modules/auth
 nest g s modules/auth
 ```
+# Swagger
+```
+npm install --save @nestjs/swagger
+```
+ # Data base 
+ ```
+ nest g mo database
+ ```
+ //instalacion de paquetes 
+ npm install typeorm @nestjs/typeorm pg
