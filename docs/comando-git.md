@@ -13,3 +13,15 @@ git init
 ```
 git remote add origin https://github.com/04melani/BACKEND_4-A
 ```
+# Crear un modulo llamado config
+```
+nest g mo config
+```
+# Crear un servicio 
+```
+nest g s config
+```
+# paquete config
+```
+npm i --save @nestjs/config
+```
