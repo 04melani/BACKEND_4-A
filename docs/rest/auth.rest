@@ -1,23 +1,26 @@
-POST http://127.0.0.1:3000/auth/register 
+POST http://127.0.0.1:3000/auth/register
 Content-Type: application/json
 
 {
-    "name": "prueba",
-    "email": "mec@gmail.com",
-    "password": "123456"
+    "name":"prueba3",
+    "mail":"hidalgo11141@gmail.com",
+    "password":"123456"
+
 }
 
 
-### login sin conexion a BD
+### login sin conexion a BDD
+
+
 POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json
 
 {
-    "name":"prueba2",
-    "email":"mec@hotmail.com",
-    "password":"1234567"
+    "name":"prueba3",
+    "mail":"hidalgo11141@gmail.com",
+    "password":"123456"
 }
 
-### USER
-Get http://127.0.0.1:3000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3Mjk5OTQ2MzMsImV4cCI6MTcyOTk5NDY5M30.1bEaCuWgmgDraw4nWtwB_dm4UJ5W6L2_6f17cnZv2_E
+### users
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiZ3VhdGl0YTJAZ29rdS5jb20iLCJpZCI6MywiaWF0IjoxNzMzNzA1NjYzLCJleHAiOjE3MzM3MDkyNjN9.zpZTzF0DuvWGVULgDs-9ajV_jCuN1nmbHFdCh-Kuf2g

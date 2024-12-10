@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { databaseProvider } from './database.providers';
+import { ConfigModule } from 'src/config/config.module';
 import { ConfigService } from 'src/config/config.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule } from 'src/config/config.module';
+import { config } from 'dotenv';
 
 @Module({
     imports:[
@@ -10,20 +11,21 @@ import { ConfigModule } from 'src/config/config.module';
             imports:[ConfigModule],
             inject:[ConfigService],
             useFactory:(config: ConfigService)=>({
-
                 type:'postgres',
-                host:config.get('HOST') ||'localhost',
+                host:config.get('HOST') || 'localhost',
                 port: +config.get('PORT_DB'),
                 username: config.get('USERNAME')||'root',
                 password: config.get('PASSWORD')||'prueba',
                 database: config.get('DATABASE'),
                 entities: [
                     __dirname + '/../**/*.entity{.ts,.js}'
-                ]
+                ],
             })
         })
     ],
-    providers: [...databaseProvider, ConfigService],
+    providers:[...databaseProvider, ConfigService],
     exports:[...databaseProvider]
 })
-export class DatabaseModule {}
+export class DatabaseModule {
+    
+}

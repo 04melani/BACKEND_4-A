@@ -1,17 +1,18 @@
-import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { LoginAuthDto } from './dto/login-auth.dto';
+import { Test, TestingModule } from '@nestjs/testing';
+import { AuthService } from './auth.service';
 
-@Injectable()
-export class AuthService {
+describe('AuthService', () => {
+  let service: AuthService;
 
-    [x: string]: any;
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [AuthService],
+    }).compile();
 
-    constructor(private jwtService: JwtService){}
-        Login(credenciales: LoginAuthDto){
-          
-            let payload={email:"admin@gmail.com",id:1}
-            const token = this.jwtService.sign(payload)
-            return {token:token};
-    }
-}
+    service = module.get<AuthService>(AuthService);
+  });
+
+  it('should be defined', () => {
+    expect(service).toBeDefined();
+  });
+});

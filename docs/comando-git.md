@@ -1,27 +1,12 @@
-# Comandos GitHub
 
-Referencia del repositorio local con el repositorio remoto (GitHub)
-git remote add origin https://github.com/04melani/BACKEND_4-A
+# comandos github
+referencia del repositorio local con el repositorio remoto github
+````
+git remote add origin https://github.com/Gabumaru1995/Back_nest_angularRP.git
+````
 
-# Comando GitHub
-
-# Inicializar el repositorio local
-```
-git init
-```
-- Refencia repositorio local
-```
-git remote add origin https://github.com/04melani/BACKEND_4-A
-```
-# Crear un modulo llamado config
-```
-nest g mo config
-```
-# Crear un servicio 
-```
-nest g s config
-```
-# paquete config
-```
-npm i --save @nestjs/config
+# comando github
+# inicializar el repositorio local
+```   
+git init 
 ```
